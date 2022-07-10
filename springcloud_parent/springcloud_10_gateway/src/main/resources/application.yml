@@ -1,0 +1,29 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: GATEWAYSERVICES
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+    gateway:
+      routes:
+        - id: category_routes # 路由对象唯一标识
+          #uri: http://localhost:8086 # 服务的地址
+          uri: lb://CATEGORYSSERVICE # 实现负载均衡
+          predicates: # 断言 用来配置路由规则
+            - Path=/categorys/** # 转发规则
+
+        - id: goods_routes # 路由对象唯一标识
+          uri: http://localhost:8085 # 服务的地址
+          predicates: # 断言 用来配置路由规则
+            - Path=/goods/** # 转发规则
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"

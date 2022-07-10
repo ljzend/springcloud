@@ -1,0 +1,14 @@
+server:
+  port: 8761 # eureka 默认端口号是8761
+spring:
+  application:
+    name: EUREKASERVICE #指定服务名， 注：服务名不能出现下划线
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka #eureka server 服务注册中心地址
+
+    fetch-registry: false # 关闭 eureka 启动的立即注册
+    register-with-eureka: false # 当前 eureka 仅仅为注册中心，不是 client
+

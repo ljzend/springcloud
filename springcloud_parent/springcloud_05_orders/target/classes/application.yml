@@ -1,0 +1,9 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: ORDERSSERVICE
+  cloud:
+    consul:
+      port: 8500
+      host: localhost

@@ -1,0 +1,16 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: CONFIGSSERVICE
+  cloud:
+    consul:
+      port: 8500
+      host: localhost
+    config:
+      server:
+        git:
+          uri: git@github.com:ljzend/springcloud_configs.git
+          ignore-local-ssh-settings: true
+          username: ljzend
+          password: ljzlys5117
