@@ -10,7 +10,7 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:ljzend/springcloud_configs.git
-          ignore-local-ssh-settings: true
+          uri: https://gitee.com/ljzend/spirngcloud_configs.git
           username: ljzend
           password: ljzlys5117
+          default-label: master
