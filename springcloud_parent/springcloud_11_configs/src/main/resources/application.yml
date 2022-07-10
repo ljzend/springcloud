@@ -12,5 +12,5 @@ spring:
         git:
           uri: https://gitee.com/ljzend/spirngcloud_configs.git
           username: ljzend
-          password: ljzlys5117
+          password: ******
           default-label: master
